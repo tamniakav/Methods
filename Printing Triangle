@@ -1,0 +1,30 @@
+using System;
+
+namespace P3.Printing_Triangle
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int limit = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= limit; i++)
+            {
+                FirstHalfOfTriangle(1, i);
+            }
+            for (int i = limit - 1; i >= 1; i--)
+            {
+                FirstHalfOfTriangle(1, i);
+            }
+        }
+
+        static void FirstHalfOfTriangle(int start, int end)
+        {
+            for (int i = start; i <= end; i++)
+            {
+              Console.Write("{0} ", i);
+            }
+            Console.WriteLine();
+        }
+    }
+}
