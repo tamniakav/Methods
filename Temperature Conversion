@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P5.Temperature_Conversion
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double fahrenheit = double.Parse(Console.ReadLine());
+
+            double celsius = ConertinToCelsius(fahrenheit);
+
+            Console.WriteLine("{0:f2}", celsius);
+        }
+
+        static double ConertinToCelsius(double fahrenheit)
+        {
+            double celsius = ((fahrenheit - 32) * 5) / 9;
+            return celsius;
+        }
+    }
+}
