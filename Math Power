@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P7.Math_Power
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double num = double.Parse(Console.ReadLine());
+            double power = double.Parse(Console.ReadLine());
+
+            double poweredNumber = CalculatingNumber(num, power);
+
+            Console.WriteLine(poweredNumber);
+        }
+
+        static double CalculatingNumber(double num, double power)
+        {
+            double poweredNumber = Math.Pow(num, power);
+            return poweredNumber;
+        }
+    }
+}
