@@ -1,0 +1,66 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace P8.Greater_of_Two_Values
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string type = Console.ReadLine();
+
+            if (type == "string")
+            {
+                string firstWord = Console.ReadLine();
+                string secondWord = Console.ReadLine();
+
+                string maxValue = GetMax(firstWord, secondWord);
+
+                Console.WriteLine(maxValue);
+            }
+            else if (type == "int")
+            {
+                int firstNUm = int.Parse(Console.ReadLine());
+                int secondNUm = int.Parse(Console.ReadLine());
+
+                int maxValue = GetMax(firstNUm, secondNUm);
+
+                Console.WriteLine(maxValue);
+            }
+            else if (type == "char")
+            {
+                char firstChar = char.Parse(Console.ReadLine());
+                char secondChar = char.Parse(Console.ReadLine());
+
+                char maxValue = GetMax(firstChar, secondChar);
+
+                Console.WriteLine(maxValue);
+            }           
+        }
+
+        static char GetMax(char firstChar, char secondChar)
+        {
+            return (char)Math.Max(firstChar, secondChar);
+        }
+
+        static int GetMax(int firstNUm, int secondNUm)
+        { 
+            return Math.Max(firstNUm, secondNUm);
+        }
+
+        static string GetMax(string firstWord, string secondWord)
+        {
+            if (firstWord.CompareTo(secondWord) >= 0)
+            {
+                return firstWord;
+            }
+            else
+            {
+                return secondWord;
+            }      
+        }
+    }
+}
