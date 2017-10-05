@@ -1,0 +1,43 @@
+using System;
+
+namespace P9.Multiply_Evens_by_Odds
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            long number = long.Parse(Console.ReadLine());
+
+            long num = Math.Abs(number);
+            CalculatingNumbers(num);
+        }
+
+        static void CalculatingNumbers(long number)
+        {
+            long singleNum = 0;
+            long odd = 0;
+            long even = 0;
+
+            while (true)
+            {
+
+                if (number == 0)
+                {
+                    break;
+                }
+                singleNum = number % 10;
+                number /= 10;
+
+                if (singleNum % 2 == 0)
+                {
+                    even += singleNum;
+                }
+                else if (singleNum % 2 == 1)
+                {
+                    odd += singleNum;
+                }
+            }
+            Console.WriteLine(odd * even);
+        }
+    }
+}
